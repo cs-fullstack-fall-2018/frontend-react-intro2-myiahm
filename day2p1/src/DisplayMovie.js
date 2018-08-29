@@ -1,14 +1,28 @@
-import React, { Component } from 'react';
-class DisplayMovie  extends Component {
+import React, {Component} from 'react';
+
+class DisplayMovie extends Component {
     render() {
+        var forEachItem =
+            this.props.movieList.map(eachItem => {
+                    return (
+                        <div>
+                            <ul>
+                                <li>Movie: {eachItem.movieName}</li>
+                                <li>Year Released: {eachItem.yearReleased}</li>
+                                <li>Genere: {eachItem.genere}</li>
+                            </ul>
+                        </div>
+                    );
+                }
+            );
         return (
             <div>
-            <h2>Movie: {this.props.movieName}</h2>
-            <h2>Year Released: {this.props.yearReleased}</h2>
-                <h2>Genere: {this.props.genere}</h2>
-        </div>)};
-
+                <h1>{forEachItem}</h1>
+                {/*<h1>Temp</h1>*/}
+            </div>
+        );
     }
+}
 
 export default DisplayMovie;
 

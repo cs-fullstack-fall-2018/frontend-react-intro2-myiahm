@@ -4,7 +4,7 @@ import DisplayMovie from "./DisplayMovie";
 class Netflix extends Component {
     render() {
 
-        const Netflix = [
+        const movieList = [
             {
                 movieName: "Sharknado",
                 yearReleased: "2013",
@@ -25,7 +25,7 @@ class Netflix extends Component {
 
         return (
             <div>
-                <DisplayMovie movieList={Netflix}/>
+                <DisplayMovie movieList={movieList}/>
             </div>
         );
 

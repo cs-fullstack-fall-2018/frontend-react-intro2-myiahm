@@ -7,11 +7,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div>{Netflix}</div>);
+          <Netflix/>;
       </div>
     );
   }
-  
+
 }
 
 export default App;
