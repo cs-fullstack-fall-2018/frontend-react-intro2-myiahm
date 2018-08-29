@@ -1,21 +1,36 @@
-import React, { Component } from 'react';
-class Netflix  extends Component {
+import React, {Component} from 'react';
+import DisplayMovie from "./DisplayMovie";
+
+class Netflix extends Component {
     render() {
-        return (<div>
-            this.state.Netflix.map((index)=>
-            (<p>The Movie {Netflix.movieName} was released in {Netflix.yearReleased} and is in
-            the {Netflix.genere} genere.</p>))}</div>);
-        const Netflix = Netflix.map((index) => [{
-            movieName: "Sharknado",
-            yearReleased: "2013",
-            genere: "Horror Comedy"
-        },
-            {movieName: "Hush", yearReleased: "2016", genere: "horror Thriller"},
-            {movieName: "Hills Have Eyes", yearReleased: "2005", genere: "Horror"}]);
-        this.state = {Netflix};
+
+        const Netflix = [
+            {
+                movieName: "Sharknado",
+                yearReleased: "2013",
+                genere: "Horror Comedy"
+            },
+
+            {
+                movieName: "Hush",
+                yearReleased: "2016",
+                genere: "horror Thriller"
+            },
+
+            {
+                movieName: "Hills Have Eyes",
+                yearReleased: "2005",
+                genere: "Horror"
+            }];
+
+        return (
+            <div>
+                <DisplayMovie movieList={Netflix}/>
+            </div>
+        );
+
 
     }
 }
 
 export default Netflix;
-
